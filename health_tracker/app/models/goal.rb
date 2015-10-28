@@ -4,5 +4,11 @@ class Goal < ActiveRecord::Base
   belongs_to :user
   has_many :foods
 
-
+  def total_calories_consumed
+    total = 0
+    foods.each do |food|
+      total += food.calories
+    end
+    return total
+  end
 end

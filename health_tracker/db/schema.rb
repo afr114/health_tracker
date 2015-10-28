@@ -26,8 +26,12 @@ ActiveRecord::Schema.define(version: 20151028224258) do
   end
 
   create_table "goals", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "calorie_goal"
+    t.integer  "exercise_goal"
+    t.integer  "user_id"
+    t.datetime "date"
   end
 
   create_table "users", force: :cascade do |t|

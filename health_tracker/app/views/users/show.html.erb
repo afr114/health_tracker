@@ -1,6 +1,4 @@
-<% if @goal == nil %>
-<h1>yes</h1>
-<% else %>
-<% binding.pry %> 
-<h1>no</h1>
-<% end %>
+<%= @goal.date.strftime('%B %d, %Y') %> <br>
+<%= @goal.calorie_goal %>
+<%= @goal.exercise_goal %>
+<%= @goal.total_calories_consumed %>
